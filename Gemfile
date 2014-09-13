@@ -32,4 +32,6 @@ group :test, :development do
   gem 'binding_of_caller'
   gem 'rspec-rails'
   gem 'database_cleaner'
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
