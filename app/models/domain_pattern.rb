@@ -2,8 +2,8 @@ class DomainPattern < ActiveRecord::Base
   belongs_to :domain
   belongs_to :pattern
 
-  def self.validate_emails(first_name, last_name, domain)
-    emails = format_emails(first_name, last_name, domain)
+  def self.format_emails(first_name, last_name, domain)
+    emails = format_names(first_name, last_name, domain)
     if emails.first == 'No email match found!'
       emails
     else
@@ -14,7 +14,7 @@ class DomainPattern < ActiveRecord::Base
     end
   end
 
-  def self.format_emails(first_name, last_name, domain)
+  def self.format_names(first_name, last_name, domain)
     if Domain.pluck(:domain).include?(domain)
       patterns = patterns(domain)
       patterns.each do |pattern|
