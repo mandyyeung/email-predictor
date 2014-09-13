@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'domain_patterns#index'
-
+  resources :domain_patterns, only: [:new, :create]
+  match 'results', to: 'domain_patterns#show', via: :post
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,0 +1,5 @@
+<%= form_tag('/results') do -%>
+  Name: <%= text_field_tag 'name' %><br>
+  Domain: <%= text_field_tag 'domain' %><br>
+  <%= submit_tag 'Generate Email Address' %>
+<% end %>

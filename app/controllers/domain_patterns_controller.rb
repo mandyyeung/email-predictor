@@ -3,6 +3,7 @@ class DomainPatternsController < ActionController::Base
   end
 
   def new
+    @domain_pattern = DomainPattern.new
   end
 
   def create
