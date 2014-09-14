@@ -49,4 +49,4 @@ class GenerateSeeds
   end
 end
 
-p GenerateSeeds.new.company_formats
+GenerateSeeds.new.write_seeds
