@@ -8,7 +8,7 @@ A Ruby on Rails tool to help predict company email addresses based on known form
 
 The following dataset has been used to generate the db/seeds.rb file:
 
-```
+```ruby
 # db/advisors.json
 {
    "John Ferguson":"john.ferguson@alphasights.com",
@@ -37,8 +37,8 @@ Start your Rails server (using Puma):
 
 ## Screenshots
 
-![Enter a name](http://imgur.com/OCsyHHM.png)
-![Enter a company domain](http://imgur.com/LNepLia.png)
+![Enter a name](http://imgur.com/zqPteJN.png)
+![Enter a company domain](http://imgur.com/hJQvKb5.png)
 ![Review information](http://imgur.com/5hPw7h9.png)
 ![Receive predicted email addresses](http://imgur.com/6pxbHtQ.png)
 
