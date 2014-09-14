@@ -1,6 +1,12 @@
-TODO: Fill out the show page
-<br><br>
-Predicted Emails -> <br>
-<% @emails.each do |email| %>
-  <%= email %><br>
-<% end %>
+<div class="predict-form form-complete">
+	<ol class="form-fields">
+		<li class="current">
+			<span class="field-label bold-label">Your Result(s):</span><br>
+      <% @emails.each do |email| %>
+  			<span class="result-label">
+  				<i class="fa fa-envelope-o"> </i>
+  				<%= email %></span>
+      <% end %>
+		</li>
+	</ol>
+</div>

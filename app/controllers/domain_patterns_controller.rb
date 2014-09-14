@@ -1,7 +1,4 @@
-class DomainPatternsController < ActionController::Base
-  def index
-  end
-
+class DomainPatternsController < ApplicationController
   def new
     @domain_pattern = DomainPattern.new
   end
