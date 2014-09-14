@@ -7,8 +7,8 @@ class DomainPattern < ActiveRecord::Base
     if emails == []
       ['No email match found!']
     else
-      emails.inject([]) do |results, pattern|
-        results << pattern + '@' + domain
+      emails.inject([]) do |results, name|
+        results << name + '@' + domain
         results
       end
     end
