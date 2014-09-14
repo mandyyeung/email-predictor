@@ -20,15 +20,22 @@ describe 'DomainPattern' do
     end
   end
 
-  context '#format_names' do
+  context '#construct_names' do
     it 'formats names properly based on known patterns' do
+      formats = DomainPattern.construct_names(first_name, last_name, [test_pattern_1])
+      expect(formats).to include('john.ferguson')
+    end
+  end
+
+  context '#format_names' do
+    it 'formats names properly based on company domain' do
       formats = DomainPattern.format_names(first_name, last_name, test_domain_1)
       expect(formats).to include('john.ferguson')
     end
 
     it 'returns an error message if domain is not in the database' do
       formats = DomainPattern.format_names(first_name, last_name, test_domain_2)
-      expect(formats).to eq(['No email match found!'])
+      expect(formats).to eq([])
     end
   end
 
@@ -39,8 +46,8 @@ describe 'DomainPattern' do
     end
 
     it 'returns an error message if domain is not in the database' do
-      formats = DomainPattern.format_names(first_name, last_name, test_domain_2)
-      expect(formats.first).to eq('No email match found!')
+      formats = DomainPattern.format_emails(first_name, last_name, test_domain_2)
+      expect(formats).to eq(['No email match found!'])
     end
   end
 end
