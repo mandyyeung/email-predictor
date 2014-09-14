@@ -8,7 +8,8 @@ A Ruby on Rails tool to help predict company email addresses based on known form
 
 The following dataset has been used to generate the db/seeds.rb file:
 
-```# db/advisors.json
+```
+# db/advisors.json
 {
    "John Ferguson":"john.ferguson@alphasights.com",
    "Damon Aw":"damon.aw@alphasights.com",
