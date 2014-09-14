@@ -503,8 +503,9 @@ button.continue,
 }
 
 /* Continue button and submit button */
-.submit-button,
-button.continue {
+input.submit-button,
+button.continue,
+.again {
 	padding: 0.6em 1.5em;
 	border: 3px solid #232529;
 	border-radius: 40px;
@@ -533,7 +534,8 @@ button.continue {
 
 .submit-button:hover,
 .submit-button:focus,
-.continue:hover {
+.continue:hover,
+.again:hover {
 	background: #232529;
 	color: #fff;
 }
