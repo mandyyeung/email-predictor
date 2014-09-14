@@ -12,6 +12,6 @@ describe 'Domain' do
   it 'has only saves a domain once' do
     domain.domain = 'alphasights.com'
     Domain.create(domain: 'alphasights.com')
-    expect(Domain.all.count).to eq(1)
+    expect(Domain.all.count).to eq(3) # 3 domains are already in db
   end
 end

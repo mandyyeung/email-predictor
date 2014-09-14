@@ -12,6 +12,6 @@ describe 'Pattern' do
   it 'has only saves a pattern once' do
     pattern.pattern = 'first_name.last_name'
     Pattern.create(pattern: 'first_name.last_name')
-    expect(Pattern.all.count).to eq(1)
+    expect(Pattern.all.count).to eq(4) # 4 patterns are already in db
   end
 end

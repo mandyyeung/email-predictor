@@ -1,17 +1,16 @@
 require 'spec_helper'
 
 describe 'DomainPattern' do
-  let(:domain) { Domain.create(domain: 'alphasights.com') }
-  let(:pattern) { Pattern.create(pattern: 'first_name.last_name') }
-  let(:association) { domain.patterns << pattern }
+  let(:domain) { Domain.find_by(domain: 'alphasights.com') }
+  let(:pattern) { Pattern.find_by(pattern: 'first_name.last_name') }
   let(:test_domain_1) { 'alphasights.com' }
-  let(:test_domain_2) { 'abc.com' }
+  let(:test_domain_2) { 'whitehouse.gov' }
   let(:test_pattern_1) { 'first_name.last_name' }
   let(:first_name) { 'john' }
   let(:last_name) { 'ferguson' }
 
   it 'associates patterns for the domain' do
-    expect(association).to include(pattern)
+    expect(domain.patterns).to include(pattern)
   end
 
   context '#patterns' do
