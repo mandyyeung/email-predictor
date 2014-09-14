@@ -44,6 +44,6 @@ Start your Rails server (using Puma):
 
 ## Future Improvements
 
-* Account for other formats of names (middle names, use of dashes, first names of more than one name)
+* Account for other formats of names (middle names, use of dashes, first names of more than one name, etc.)
 
-* Use the API from [verify-email.org](http://verify-email.org/) to validate predicted email addressse
+* Use the API from [verify-email.org](http://verify-email.org/) to validate predicted email addresses
