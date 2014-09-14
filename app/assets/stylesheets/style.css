@@ -219,7 +219,7 @@ button.continue,
 	pointer-events: none;
 }
 
-.form-fields > li .result-label {
+.form-fields > li .result-label, .result-label a {
 	display: inline-block;
 	padding: 0 5px 1em 0;
 	pointer-events: none;
@@ -517,6 +517,7 @@ button.continue,
 .no-js .predict-form .submit-button  {
 	display: block;
 	float: right;
+	background-color: #fff;
 }
 
 .review-form .submit-button {

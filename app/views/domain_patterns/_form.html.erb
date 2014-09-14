@@ -2,11 +2,11 @@
   <ol class="form-fields">
     <li>
       <label class="field-label bold-label" for="name">Advisor's name:</label>
-      <input class="input-field" id="name" name="name" type="text" placeholder="Peter Wong" required/>
+      <input class="input-field" id="name" pattern="[A-Za-z]+\s{1}[A-Za-z]+" title="first and last name" name="name" type="text" placeholder="Peter Wong" required/>
     </li>
     <li>
       <label class="field-label bold-label" for="domain" data-info="No www-prefix, please">Advisor company domain:</label>
-      <input class="input-field" id="domain" name="domain" type="text" placeholder="alphasights.com" required/>
+      <input class="input-field" id="domain" pattern="[A-Za-z]+\.{1}[A-Za-z.]+" title="domain + . + top-level domain" name="domain" type="text" placeholder="alphasights.com" required/>
     </li>
   </ol>
   <%= submit_tag 'Submit', class: 'submit-button' %>
