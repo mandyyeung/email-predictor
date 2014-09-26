@@ -5,8 +5,8 @@ class GenerateSeeds
     file = File.read('db/advisors.json')
     data = JSON.parse(file)
     data.inject([]) do |array, advisor| # advisor = [name, email]
-      array << Hash[*advisor[1].split('@').reverse.flatten]
-      array # [["alphasights.com", "john.ferguson"],...]
+      array << Hash[*advisor[1].split('@').reverse.flatten] # advisor[1] = email address
+      array # [{"alphasights.com", "john.ferguson"},...]
     end
   end
 
