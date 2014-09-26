@@ -12,6 +12,7 @@ class DomainPattern < ActiveRecord::Base
         results
       end
     end
+    # returns an array of results, ex. ["mandy.y@google.com", "m.yeung@google.com"]
   end
 
   def self.format_names(first_name, last_name, domain)
@@ -21,6 +22,7 @@ class DomainPattern < ActiveRecord::Base
     else
       []
     end
+    # returns an array of formatted names, ex. ["mandy.y", "m.yeung"]
   end
 
   def self.construct_names(first_name, last_name, patterns)
@@ -30,9 +32,11 @@ class DomainPattern < ActiveRecord::Base
       pattern.gsub!('last_name', last_name)
       pattern.gsub!('last_initial', last_name[0])
     end
+    # returns an array of formatted names, ex. ["mandy.y", "m.yeung"]
   end
 
   def self.patterns(domain)
     Domain.find_by(domain: domain).patterns.pluck(:pattern)
+    # returns array of patterns ex. ["first_name.last_initial", "first_initial.last_name"]
   end
 end
