@@ -32,6 +32,7 @@ class GenerateSeeds
       end
     end
     data.uniq # [{"alphasights.com"=>"first_name.last_name"},...]
+    # to filter out same patterns for one company
   end
 
   def seed_data
@@ -49,5 +50,5 @@ class GenerateSeeds
   end
 end
 
-p GenerateSeeds.new.data_array
+p GenerateSeeds.new.company_format
 #GenerateSeeds.new.write_seeds
