@@ -7,7 +7,7 @@ class DomainPattern < ActiveRecord::Base
   def self.working_emails(first_name, last_name, domain)
     emails = format_emails(first_name, last_name, domain)
     emails.delete_if do |email|
-      !verify_email(email)
+      verify_email(email)
     end
     emails.empty? ? ['No email matches found!'] : emails
   end
