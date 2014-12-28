@@ -1,6 +1,6 @@
 # Email Predictor
 
-A Ruby on Rails tool to help predict company email addresses based on known formats.
+A Ruby on Rails tool to help predict company email addresses based on known formats. ([ref](https://gist.github.com/JohnKellyFerguson/2180a661f46aa92292f1))
 
 ## Options for Data
 
@@ -46,4 +46,4 @@ Start your Rails server (using Puma):
 
 * Account for other formats of names (middle names, use of dashes, first names of more than one name, etc.)
 
-* Use the API from [verify-email.org](http://api.verify-email.org/api.php?usr=nectarflowers&pwd=testing1&check=larry.p@google.com) to validate predicted email addresses
+* <del>Use the API from [verify-email.org](http://api.verify-email.org/api.php?usr=nectarflowers&pwd=testing1&check=larry.p@google.com) to validate predicted email addresses</del>
